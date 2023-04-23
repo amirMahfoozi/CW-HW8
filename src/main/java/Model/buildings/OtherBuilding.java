@@ -14,8 +14,8 @@ public class OtherBuilding extends Building {
     private Integer capacity;
 
 
-    public OtherBuilding(Government government, int gold, String name, int hitpoint, Resource resourceRequired,int amountOfResource, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells, Integer rate, Integer capacity) {
-        super(government, gold, name, hitpoint, resourceRequired,amountOfResource, amountOfWorkers,textures,occupiedCells);
+    public OtherBuilding(Government government, int gold, String name, int hitpoint, Resource resourceRequired, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells, Integer rate, Integer capacity) {
+        super(government, gold, name, hitpoint, resourceRequired, amountOfWorkers,textures,occupiedCells);
         this.rate = rate;
         this.capacity = capacity;
     }

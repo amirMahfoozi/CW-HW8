@@ -22,7 +22,7 @@ public class Main {
             label:
             while (true) {
                 if (!invalidCommandChecker)
-                    System.out.println("welcome to the start menu of the game!\nwould you like to sign up or login?\nalso if you want to close just type close!\ntype sign up or login:");
+                    System.out.println("welcome to the start menu of game!\nwould you like to sign up or login?\nalso if you want to close just type close!\ntype sign up or login:");
                 invalidCommandChecker = false;
                 String input = scanner.nextLine();
                 switch (input) {
@@ -49,5 +49,8 @@ public class Main {
             ProfileMenuController controller = new ProfileMenuController();
             controller.run(scanner);
         }
+    }
+    public static void ss(String m){
+        m=m+"salam";
     }
 }

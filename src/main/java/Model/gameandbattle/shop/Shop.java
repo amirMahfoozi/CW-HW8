@@ -1,5 +1,6 @@
 package Model.gameandbattle.shop;
 
+import Model.gameandbattle.battle.Weapon;
 import Model.gameandbattle.stockpile.Food;
 import Model.gameandbattle.stockpile.Resource;
 
@@ -7,31 +8,47 @@ import java.util.ArrayList;
 
 public class Shop {
     private static Shop shop;
-    private ArrayList<Resource> resources;
-    private ArrayList<Food> foods;
+    private Resource[] resources;
+    private Food[] foods;
+    private Weapon[] weapons;
+    static {
+        shop=new Shop();
+    }
     private Shop(){
-        // TODO: 4/14/2023 fill here
+        resources=Resource.getAllResources();
+        foods=Food.getAllFoods();
+        weapons=Weapon.getAllWeapons();
     }
 
-    public ArrayList<Resource> getResources() {
+    public Resource[] getResources() {
         return resources;
     }
 
-    public void setResources(ArrayList<Resource> resources) {
+    public void setResources(Resource[] resources) {
         this.resources = resources;
     }
 
-    public ArrayList<Food> getFoods() {
+    public Food[] getFoods() {
         return foods;
     }
 
-    public void setFoods(ArrayList<Food> foods) {
+    public static Shop getShop() {
+        return shop;
+    }
+
+    public static void setShop(Shop shop) {
+        Shop.shop = shop;
+    }
+
+    public void setFoods(Food[] foods) {
         this.foods = foods;
     }
 
-    public static Shop getShop() {
-        if (shop == null)
-            shop = new Shop();
-        return shop;
+    public Weapon[] getWeapons() {
+        return weapons;
+    }
+
+    public void setWeapons(Weapon[] weapons) {
+        this.weapons = weapons;
     }
 }

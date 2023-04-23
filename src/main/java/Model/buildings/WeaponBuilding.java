@@ -11,13 +11,13 @@ import Model.gameandbattle.stockpile.Resource;
 import java.util.ArrayList;
 
 public class WeaponBuilding extends Building {
-    private ArrayList<Resource> consumableResources;
+    private Resource resources;
     private int productionRate;
     private ArrayList<Weapon> weapons;
 
-    public WeaponBuilding(Government government, int gold, String name, int hitpoint, Resource resourceRequired,int amountOfResource, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells, ArrayList<Resource> consumableResources, int productionRate) {
-        super(government, gold, name, hitpoint, resourceRequired,amountOfResource, amountOfWorkers,textures,occupiedCells);
-        this.consumableResources = consumableResources;
+    public WeaponBuilding(Government government, int gold, String name, int hitpoint, Resource resourceRequired, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells, Resource resources, int productionRate) {
+        super(government, gold, name, hitpoint, resourceRequired, amountOfWorkers,textures,occupiedCells);
+        this.resources = resources;
         this.productionRate = productionRate;
         weapons=new ArrayList<>();
     }

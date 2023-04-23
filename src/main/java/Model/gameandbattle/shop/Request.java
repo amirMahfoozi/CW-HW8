@@ -7,19 +7,20 @@ public class Request {
     private Government sender;
     private Government receiver;
     private Resource resource;
-    private String message;
+    private String senderMessage;
+    private String receiverMessage;
     private int price;
     private int amount;
     private int id;
 
-    public Request(Government sender, Government receiver, Resource resource, String message, int price, int amount) {
+    public Request(Government sender, Government receiver, Resource resource, String senderMessage, int price, int amount) {
         this.sender = sender;
         this.receiver = receiver;
         this.resource = resource;
-        this.message = message;
+        this.senderMessage = senderMessage;
         this.price = price;
         this.amount = amount;
-        // TODO: 4/12/2023 add id
+        receiverMessage=null;
     }
 
     public Government getSender() {
@@ -46,12 +47,20 @@ public class Request {
         this.resource = resource;
     }
 
-    public String getMessage() {
-        return message;
+    public String getSenderMessage() {
+        return senderMessage;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public void setSenderMessage(String senderMessage) {
+        this.senderMessage = senderMessage;
+    }
+
+    public String getReceiverMessage() {
+        return receiverMessage;
+    }
+
+    public void setReceiverMessage(String receiverMessage) {
+        this.receiverMessage = receiverMessage;
     }
 
     public int getPrice() {

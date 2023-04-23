@@ -19,7 +19,7 @@ public class MapMenuController {
         return showMapWithXY(currentMap, x, y);
     }
 
-    public String showMapWithXY(Map currentMap, int x, int y) {
+    private String showMapWithXY(Map currentMap, int x, int y) {
         String ANSI_RESET = "\u001B[0m";
         String colorCode;
         /*String ANSI_RED = "\u001b[31m";
@@ -28,7 +28,7 @@ public class MapMenuController {
         StringBuilder result = new StringBuilder();
         if (!isCoordinateValid(x, y, currentMap.getSize()))
             return "invalid coordinate";
-        for (int i = x - 20; i <= x + 20; i++) {
+        for (int i = x - 2; i <= x + 2; i++) {
             for (int j = 0; j < 43; j++) {
                 result.append("-");
             }
@@ -52,31 +52,8 @@ public class MapMenuController {
                 }
                 result.append("|\n");
             }
-        }
-        for (int j = 0; j < 43; j++) {
-            result.append("-");
-        }
-        return result.toString();
-    }
-
-    public String showAllOfMapWithXY(Map currentMap, int x, int y) {
-        String ANSI_RESET = "\u001B[0m";
-        String colorCode;
-        /*String ANSI_RED = "\u001b[31m";
-        String ANSI_BLUE = "\u001b[34m";
-        String ANSI_GREEN = "\u001b[32m";*/
-        StringBuilder result = new StringBuilder();
-        if (!isCoordinateValid(x, y, currentMap.getSize()))
-            return "invalid coordinate";
-        for (int i = x - 95; i <= x + 95; i++) {
-            if (i >= 0 && i < currentMap.getSize()) {
-                for (int j = y - 95; j <= y + 95; j++) {
-                    if (j >= 0 && j < currentMap.getSize()) {
-                        colorCode = getColorCode(currentMap.getMapCells()[x][y]);
-                        result.append(colorCode).append(currentMap.getMapCells()[x][y].getToPrint()).append(ANSI_RESET);
-                    }
-                }
-                result.append("|\n");
+            for (int j = 0; j < 43; j++) {
+                result.append("-");
             }
         }
         return result.toString();

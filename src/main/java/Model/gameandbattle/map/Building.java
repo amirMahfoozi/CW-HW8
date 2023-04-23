@@ -12,13 +12,12 @@ public class Building {
     private String name;
     private int hitpoint;
     private Resource resourceRequired;
-    private int amountOfResource;
     private ArrayList<Person> workers;
     private ArrayList<Texture> allowedTextures;
     private int popularityIncreaseRate;
     private ArrayList<Cell> occupiedCells;
 
-    public Building(Government government, int gold, String name, int hitpoint, Resource resourceRequired,int amountOfResource, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells) {
+    public Building(Government government, int gold, String name, int hitpoint, Resource resourceRequired, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells) {
         this.government = government;
         this.gold = gold;
         this.name = name;
@@ -27,7 +26,6 @@ public class Building {
         workers=new ArrayList<>();
         allowedTextures=textures;
         this.occupiedCells=occupiedCells;
-        this.amountOfResource=amountOfResource;
     }
 
     public Building getBuildingByName(String name){

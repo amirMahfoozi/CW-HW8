@@ -8,20 +8,19 @@ import Model.gameandbattle.map.Texture;
 import Model.gameandbattle.stockpile.Resource;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 
 public class CastleBuilding extends Building {
     private Integer capacity;
     private Integer fireRange;
     private Integer defendRange;
-    private HashMap<String, Integer> cost;   //if size==2 first number is cost of ladderMan
+    private ArrayList<Integer> cost;   //if size==2 first number is cost of ladderMan
     private Integer amountOfDecreaseInSpeed;
     private Integer damage;
     private Integer rate;
-    public CastleBuilding(Government government, int gold, String name, int hitpoint, Resource resourceRequired, int amountOfResource, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells, Integer capacity,
-                          Integer fireRange, Integer defendRange, HashMap<String, Integer> cost, Integer amountOfDecreaseInSpeed, Integer damage, Integer rate) {
-        super(government, gold, name, hitpoint, resourceRequired,amountOfResource, amountOfWorkers,textures,occupiedCells);
+
+    public CastleBuilding(Government government, int gold, String name, int hitpoint, Resource resourceRequired, int amountOfWorkers, ArrayList<Texture> textures, ArrayList<Cell> occupiedCells, Integer capacity,
+                          Integer fireRange, Integer defendRange, ArrayList<Integer> cost, Integer amountOfDecreaseInSpeed, Integer damage, Integer rate) {
+        super(government, gold, name, hitpoint, resourceRequired, amountOfWorkers,textures,occupiedCells);
         this.capacity = capacity;
         this.fireRange = fireRange;
         this.defendRange = defendRange;
