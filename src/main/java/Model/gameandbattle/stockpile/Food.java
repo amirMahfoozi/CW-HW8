@@ -26,14 +26,4 @@ public enum Food {
     public String getName() {
         return name;
     }
-    public static Food[] getAllFoods(){
-        Food[] foods={Food.MEAT,Food.CHEESE,Food.BREAD,Food.APPLE};
-        return foods;
-    }
-    public static Food getFoodByNumber(int a){
-        if(a==1) return MEAT;
-        if(a==2) return CHEESE;
-        if(a==3) return BREAD;
-        return APPLE;
-    }
 }
