@@ -229,7 +229,7 @@ public class SignUpController {
         }
     }
 
-    public static String withoutQuotation(String string) {
+    public String withoutQuotation(String string) {
         if (string.charAt(0) == '"') return string.substring(1, string.length() - 1);
         return string;
     }

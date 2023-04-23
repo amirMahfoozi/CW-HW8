@@ -1,5 +1,6 @@
 package Model.gameandbattle.map;
 
+import Controller.DataBank;
 import Model.gameandbattle.map.Cell;
 
 import java.util.ArrayList;
@@ -7,16 +8,16 @@ import java.util.ArrayList;
 public enum Map {
 
     //map templates
-    MAP_NUMBER_ONE(0,""),
-    MAP_NUMBER_TWO(0,""),
-    MAP_NUMBER_THREE(0,"");
+    MAP_NUMBER_ONE(200,"map number one", DataBank.getMapNumberOne()),
+    MAP_NUMBER_TWO(0,"map number two",null),
+    MAP_NUMBER_THREE(0,"map number tree",null);
     private Cell[][] map;
     private String name;
     private final int size;
 
-    Map(int size,String name){
+    Map(int size,String name,Cell[][] map){
         this.size=size;
-        map=new Cell[size][size];
+        this.map=map;
         this.name=name;
     }
 

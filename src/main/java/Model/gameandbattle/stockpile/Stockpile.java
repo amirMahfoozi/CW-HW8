@@ -85,25 +85,4 @@ public class Stockpile {
     public void setAle(int ale) {
         this.ale = ale;
     }
-    public int getByName(String name){
-        if(name.equals("wood")) return wood;
-        if(name.equals("pitch")) return pitch;
-        if(name.equals("metal")) return metal;
-        if(name.equals("stone")) return stone;
-        if(name.equals("wheat")) return wheat;
-        if(name.equals("floor")) return floor;
-        if(name.equals("hops")) return hops;
-        if(name.equals("ale")) return ale;
-        return -1;
-    }
-    public void increaseByName(String name, int amount){
-        if(name.equals("wood")) wood=wood+amount;
-        if(name.equals("pitch")) pitch=pitch+amount;
-        if(name.equals("metal")) metal=metal+amount;
-        if(name.equals("stone"))stone=stone+amount;
-        if(name.equals("wheat")) wheat+=amount;
-        if(name.equals("floor")) floor+=amount;
-        if(name.equals("hops")) hops+=amount;
-        if(name.equals("ale")) ale+=amount;
-    }
 }

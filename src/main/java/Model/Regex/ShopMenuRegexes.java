@@ -4,11 +4,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public enum ShopMenuRegexes {
-    SHOW_PRICE_LIST("show price list"),
-    BUY("buy\\s+.+"),
-    NAME("\\-i\\s+(?<name>(\"(.+)\")|\\S+)"),
-    AMOUNT("\\-a\\s+(?<amount>(\"(.+)\")|\\S+)"),
-    SELL("sell\\s+.+");
+    SHOW_PRICE_LIST(""),
+    BUY(""),
+    SELL("");
     private String regex;
 
     private ShopMenuRegexes(String regex) {

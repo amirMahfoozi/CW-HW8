@@ -3,6 +3,7 @@ package View.menus;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 
+import Controller.MainMenuController;
 import Controller.ProfileMenuController;
 import Model.Regex.ProfileMenuRegexes;
 import Model.signup_login_profile.User;
@@ -11,7 +12,6 @@ import View.enums.Validations;
 public class ProfileMenu {
 
     private final ProfileMenuController profileMenuController;
-
     public ProfileMenu(ProfileMenuController profileMenuController) {
         this.profileMenuController = profileMenuController;
     }
@@ -44,6 +44,9 @@ public class ProfileMenu {
             } else if (command.matches("user\\s+logout")) {
                 System.out.println("user successfully logged out");
                 return;
+            } else if(command.matches("main\\s+menu")) {
+                MainMenuController mainMenuController = new MainMenuController();
+                mainMenuController.run(scanner);
             } else
                 System.out.println("invalid command");
         }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Government {
-    private static final int limitOfResources = 300;
+    private static final int limitOfResources = 5;
     private int popularity;
     private int foodRate;
     private User ruler;
@@ -27,8 +27,7 @@ public class Government {
     private String color;
     private Troop king;
     private int workersEfficiency;
-    private int[] foods;
-    private int[] weapons;
+
     public Government(int popularity, int foodRate, User ruler, int taxRate, int coin, int fearRate, int population, String color) {
         this.popularity = popularity;
         //initialize food here
@@ -43,19 +42,9 @@ public class Government {
         stockpile=new Stockpile(0,0,0,0,0,0,0,0);
         granary=new Granary(0,0,0,0);
         workersEfficiency=100;
-        foods= new int[]{0, 0, 0, 0};
-        weapons= new int[]{0, 0, 0, 0};
     }
     ////////////////////setters and getters////////////////////
 
-
-    public int[] getWeapons() {
-        return weapons;
-    }
-
-    public void setWeapons(int[] weapons) {
-        this.weapons = weapons;
-    }
 
     public Troop getKing() {
         return king;
@@ -156,43 +145,5 @@ public class Government {
 
     public int getWorkersEfficiency() {
         return workersEfficiency;
-    }
-
-    public int getPopulation() {
-        return population;
-    }
-
-    public void setPopulation(int population) {
-        this.population = population;
-    }
-
-    public ArrayList<Building> getBuildings() {
-        return buildings;
-    }
-
-    public void setBuildings(ArrayList<Building> buildings) {
-        this.buildings = buildings;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setKing(Troop king) {
-        this.king = king;
-    }
-
-    public int[] getFoods() {
-        return foods;
-    }
-
-    public void setFoods(int[] foods) {
-        this.foods = foods;
-    }
-    public int amountOfAllResources(){
-        return stockpile.getAle()+stockpile.getWood()+ stockpile.getFloor()+stockpile.getMetal()+ stockpile.getHops()+ stockpile.getPitch()+ stockpile.getStone()+ stockpile.getWheat();
-    }
-    public static int getLimitOfResources(){
-        return limitOfResources;
     }
 }
